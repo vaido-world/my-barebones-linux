@@ -3,11 +3,6 @@ KERNEL_DIRECTORY=linux-$(KERNEL_VERSION)
 KERNEL_ARCHIVE=$(KERNEL_DIRECTORY).tar.xz
 KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v4.x/$(KERNEL_ARCHIVE)
 
-BUSYBOX_VERSION=1.28.0
-BUSYBOX_DIRECTORY=busybox-$(BUSYBOX_VERSION)
-BUSYBOX_ARCHIVE=$(BUSYBOX_DIRECTORY).tar.bz2
-BUSYBOX_URL=https://busybox.net/downloads/$(BUSYBOX_ARCHIVE)
-
 all: vmlinuz initramfs
 
 
@@ -22,22 +17,13 @@ $(KERNEL_DIRECTORY):
 
 
 # Initramfs build targets
-initramfs: initfs initfs/init initfs/bin/busybox
+initramfs: initfs initfs/init
 	cd initfs/ && find . | cpio -o --format=newc > ../initramfs
 
 initfs/init: initfs init.sh
 	cp init.sh initfs/init
 
-$(BUSYBOX_DIRECTORY):
-	wget $(BUSYBOX_URL)
-	tar xf $(BUSYBOX_ARCHIVE)
-
-initfs/bin/busybox: $(BUSYBOX_DIRECTORY)
-	cp busybox.config $(BUSYBOX_DIRECTORY)/.config
-	cd $(BUSYBOX_DIRECTORY) && make -j`nproc`
-	cp $(BUSYBOX_DIRECTORY)/busybox initfs/bin/busybox
-	bash symlink-busybox.sh
-
+	
 initfs:
 	mkdir -p initfs/bin initfs/proc initfs/dev initfs/sys
 
@@ -55,5 +41,5 @@ runiso: barebones.iso
 
 clean:
 	rm -rf vmlinuz initramfs $(KERNEL_DIRECTORY) $(KERNEL_ARCHIVE) \
-	$(BUSYBOX_DIRECTORY) $(BUSYBOX_ARCHIVE) iso/boot/vmlinuz \
+	iso/boot/vmlinuz \
 	iso/boot/initramfs barebones.iso

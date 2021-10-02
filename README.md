@@ -22,6 +22,7 @@ Visit Wiki for something useful. [Wiki on GitHub](https://github.com/vaido-world
 
 
 ## Requirements [Ubuntu 21.04] Live CD
+Change the KERNEL_VERSION to `KERNEL_VERSION=5.11.1`
 ```
 sudo apt install make
 sudo apt install gcc

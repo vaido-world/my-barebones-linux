@@ -23,10 +23,10 @@ $(KERNEL_DIRECTORY):
 
 # Initramfs build targets
 initramfs: initfs initfs/init
-	cd initfs/ && find . | cpio -o --format=newc > ../initramfs
+	cd initfs/ && find . | cpio --create --format="newc" > ../initramfs
 
-initfs/init: initfs init.sh
-	cp init.sh initfs/init
+initfs/init: initfs init-source-code.c
+	gcc -static init-source-code.c -o initfs/init
 
 	
 initfs:

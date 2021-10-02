@@ -21,8 +21,13 @@ qemu-system-x86_64 -m 2048 -cdrom barebones.iso -boot d
 Visit Wiki for something useful. [Wiki on GitHub](https://github.com/vaido-world/my-barebones-linux/wiki)
 
 
-## Requirements
+## Requirements [Ubuntu 21.04] Live CD
 ```
 sudo apt install make
 sudo apt install gcc
+sudo apt install flex
+sudo apt install bison
+sudo apt install libssl-dev 
+sudo apt install libelf-dev
+
 ```

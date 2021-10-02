@@ -3,6 +3,8 @@
 
 Originally by: https://suchprogramming.com/barebones-linux-system/
 
+This fork does not depend on BusyBox and BusyBox Bash shell.
+
 My barebones linux build and testing scripts
 
 1. Boot into Ubuntu 19.04

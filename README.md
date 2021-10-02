@@ -33,4 +33,7 @@ sudo apt install bison
 sudo apt install libssl-dev 
 sudo apt install libelf-dev
 
+# Optional dependency
+sudo apt install qemu-system-x86
+
 ```

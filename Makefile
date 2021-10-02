@@ -3,6 +3,9 @@ KERNEL_DIRECTORY=linux-$(KERNEL_VERSION)
 KERNEL_ARCHIVE=$(KERNEL_DIRECTORY).tar.xz
 KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KERNEL_ARCHIVE)
 
+
+
+# ____________Default_Make_command____________
 # These are the default targets when using make. 
 # First the vmlinuz of this makefile then the others.
 # at the end of this makefile, there are unused targets for launching Linux Kernel using Qemu Emulator.

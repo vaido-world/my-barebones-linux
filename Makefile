@@ -10,7 +10,7 @@ KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KERNEL_ARCHIVE)
 all: vmlinuz initramfs barebones.iso
 
 
-# ____________Kernel build targets____________
+# ____________Kernel_build_targets____________
 vmlinuz: $(KERNEL_DIRECTORY)
 	cd "$(KERNEL_DIRECTORY)" && make "defconfig" && make --jobs=`nproc`
 	cp "$(KERNEL_DIRECTORY)/arch/x86_64/boot/bzImage" "vmlinuz"
@@ -20,7 +20,7 @@ $(KERNEL_DIRECTORY):
 	tar xf "$(KERNEL_ARCHIVE)"
 
 
-# ____________Initramfs build targets____________
+# ____________Initramfs_build_targets____________
 initramfs: initfs initfs/init
 	cd "./initfs/" && find "." | cpio --create --format="newc" > "../initramfs"
 
@@ -36,7 +36,7 @@ barebones.iso: vmlinuz initramfs
 	cp "./vmlinuz" "./initramfs" "./iso/boot/."
 	grub-mkrescue -o "./barebones.iso" "./iso"
 
-# ____________Utility targets____________
+# ____________Utility_targets____________
 runvm: vmlinuz initramfs
 	qemu-system-x86_64 -m "2048" -kernel "./vmlinuz" -initrd "./initramfs"
 

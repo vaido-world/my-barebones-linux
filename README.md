@@ -1,9 +1,8 @@
 # my-barebones-linux
 ![image](https://user-images.githubusercontent.com/21064622/135717759-275a0bc3-e919-4880-a8a5-32beb64a6e8a.png)  
 Tested on a physical x86-64 computer and QEMU emulator.
-
 Originally by: https://suchprogramming.com/barebones-linux-system/
-
+___
 This fork does not depend on BusyBox and BusyBox Bash shell.
 
 My barebones linux build and testing scripts

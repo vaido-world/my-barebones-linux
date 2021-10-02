@@ -34,6 +34,8 @@ sudo apt install libssl-dev
 sudo apt install libelf-dev
 
 # dependecy required by grub-mkrescue 
+sudo add-apt-repository universe
+sudo apt-get update
 sudo apt install xorriso
 
 # Optional dependency

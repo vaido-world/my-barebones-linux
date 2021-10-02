@@ -34,7 +34,7 @@ sudo apt install libssl-dev
 sudo apt install libelf-dev
 
 # dependecy required by grub-mkrescue 
-sudo apt-get install xorriso
+sudo apt install xorriso
 
 # Optional dependency
 sudo apt install qemu-system-x86

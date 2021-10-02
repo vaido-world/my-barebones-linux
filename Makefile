@@ -1,7 +1,8 @@
 KERNEL_VERSION=5.0.1
+KERNEL_VERSION_NUMBER=${KERNEL_VERSION:0:1}
 KERNEL_DIRECTORY=linux-$(KERNEL_VERSION)
 KERNEL_ARCHIVE=$(KERNEL_DIRECTORY).tar.xz
-KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KERNEL_ARCHIVE)
+KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v$(KERNEL_VERSION_NUMBER).x/$(KERNEL_ARCHIVE)
 
 # These are the default targets when using make. 
 # First the vmlinuz of this makefile then the others.

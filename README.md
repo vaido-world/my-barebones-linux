@@ -9,7 +9,7 @@ My barebones linux build and testing scripts
 
 1. Boot into Ubuntu 19.04
 2. Use `make` command when in the `my-barebones-linux-master/` folder to produce Linux Kernel and Initfram.
-3. To test the Linux Kernel and Init binary use this command line:
+3. To test the Linux Kernel and Init binary use this command line: `make runvm` or `make runiso`
 ```
 qemu-system-x86_64 -m 2048 -kernel vmlinuz -initrd initramfs
 ```

@@ -14,8 +14,6 @@ My barebones linux build and testing scripts
 2. Use `make` command when in the `my-barebones-linux-master/` folder to produce Linux Kernel and Initfram.
 3. To test the Linux Kernel and Init binary use this command line: `make runvm` or `make runiso`
 
-To test the Live CD:
-
 
 Visit Wiki for something useful. [Wiki on GitHub](https://github.com/vaido-world/my-barebones-linux/wiki)
 

@@ -43,6 +43,6 @@ runiso: barebones.iso
 	qemu-system-x86_64 -m "2048" -cdrom "./barebones.iso" -boot d
 
 clean:
-	rm -rf vmlinuz initramfs $(KERNEL_DIRECTORY) $(KERNEL_ARCHIVE) \
+	rm -rf "./vmlinuz" "./initramfs" $(KERNEL_DIRECTORY) $(KERNEL_ARCHIVE) \
 	"./iso/boot/vmlinuz" \
 	"./iso/boot/initramfs" "./barebones.iso"

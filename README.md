@@ -6,6 +6,8 @@ Originally by: https://suchprogramming.com/barebones-linux-system/
 This fork does not depend on BusyBox and BusyBox Bash shell.
 
 My barebones linux build and testing scripts
+> Note
+> It seems that Host system have errors when compiling Linux Kernel of version other than one existing on the Host system
 
 1. Boot into Ubuntu 19.04
 2. Use `make` command when in the `my-barebones-linux-master/` folder to produce Linux Kernel and Initfram.

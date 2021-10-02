@@ -3,12 +3,9 @@ KERNEL_DIRECTORY=linux-$(KERNEL_VERSION)
 KERNEL_ARCHIVE=$(KERNEL_DIRECTORY).tar.xz
 KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KERNEL_ARCHIVE)
 
-# This line checks if files exist in the makefile directory
-# If they do exist, the makefile is considered completed sucessully
-# And stops the whole makefile from continuing
-# This code line can be considered the goals of the makefile.
-# If they are reached, the makefile stops
-all: vmlinuz initramfs barebones.iso runvm
+# These are the default targets when using make. 
+# First the vmlinuz of this makefile then the others.
+all: vmlinuz initramfs barebones.iso
 
 
 # Kernel build targets

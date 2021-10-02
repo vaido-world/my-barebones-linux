@@ -8,7 +8,7 @@ KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KERNEL_ARCHIVE)
 # And stops the whole makefile from continuing
 # This code line can be considered the goals of the makefile.
 # If they are reached, the makefile stops
-all: vmlinuz initramfs barebones.iso
+all: vmlinuz initramfs barebones.iso runvm
 
 
 # Kernel build targets

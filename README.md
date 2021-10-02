@@ -19,3 +19,10 @@ qemu-system-x86_64 -m 2048 -cdrom barebones.iso -boot d
 ```
 
 Visit Wiki for something useful. [Wiki on GitHub](https://github.com/vaido-world/my-barebones-linux/wiki)
+
+
+## Requirements
+```
+sudo apt install make
+sudo apt install gcc
+```

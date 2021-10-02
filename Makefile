@@ -35,7 +35,7 @@ initfs:
 barebones.iso: vmlinuz initramfs
 	mkdir -p iso/boot/grub
 	cp vmlinuz initramfs iso/boot/.
-	grub-mkrescue -o $@ iso
+	grub-mkrescue -o barebones.iso iso
 
 # Utility targets
 runvm: vmlinuz initramfs

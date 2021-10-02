@@ -24,7 +24,7 @@ Visit Wiki for something useful. [Wiki on GitHub](https://github.com/vaido-world
 ## Requirements [Ubuntu 21.04] Live CD
 Change the KERNEL_VERSION variable inside the `Makefile ` to `KERNEL_VERSION=5.11.1`
 
-Then install these:
+Then install these dependencies:
 ```
 sudo apt install make
 sudo apt install gcc
@@ -33,7 +33,7 @@ sudo apt install bison
 sudo apt install libssl-dev 
 sudo apt install libelf-dev
 
-# dependecies required by grub-mkrescue 
+# required by grub-mkrescue 
 sudo add-apt-repository universe
 sudo apt-get update
 sudo apt install xorriso

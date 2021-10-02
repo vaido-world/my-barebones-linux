@@ -8,7 +8,7 @@ This fork does not depend on BusyBox and BusyBox Bash shell.
 My barebones linux build and testing scripts
 > Note
 > It seems that Host system have errors when compiling Linux Kernel of version other than one existing on the Host system
-> Always use uname -r and change KERNEL_VERSION in the Makefile to the one that your host system uses to avoid errors.
+> Always use `uname -r` to get the host kernel version and change KERNEL_VERSION in the Makefile to the one that your host system uses to avoid errors.
 
 1. Boot into Ubuntu 19.04
 2. Use `make` command when in the `my-barebones-linux-master/` folder to produce Linux Kernel and Initfram.

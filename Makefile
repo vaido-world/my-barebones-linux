@@ -11,7 +11,7 @@ all: vmlinuz initramfs barebones.iso
 
 # Kernel build targets
 vmlinuz: $(KERNEL_DIRECTORY)
-	cd $(KERNEL_DIRECTORY) && make defconfig && make -j`nproc`
+	cd $(KERNEL_DIRECTORY) && make defconfig && make --jobs=`nproc`
 	cp $(KERNEL_DIRECTORY)/arch/x86_64/boot/bzImage vmlinuz
 
 $(KERNEL_DIRECTORY):

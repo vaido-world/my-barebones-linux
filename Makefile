@@ -21,28 +21,28 @@ $(KERNEL_DIRECTORY):
 
 # Initramfs build targets
 initramfs: initfs initfs/init
-	cd initfs/ && find . | cpio --create --format="newc" > ../initramfs
+	cd "./initfs/" && find "." | cpio --create --format="newc" > "../initramfs"
 
 initfs/init: initfs init-source-code.c
-	gcc -static init-source-code.c -o initfs/init
+	gcc -static "./init-source-code.c" -o "./initfs/init"
 
 	
 initfs:
-	mkdir -p initfs/bin initfs/proc initfs/dev initfs/sys
+	mkdir -p "./initfs/bin" "./initfs/proc" "./initfs/dev" "./initfs/sys"
 
 barebones.iso: vmlinuz initramfs
-	mkdir -p iso/boot/grub
-	cp vmlinuz initramfs iso/boot/.
-	grub-mkrescue -o barebones.iso iso
+	mkdir -p "./iso/boot/grub"
+	cp "./vmlinuz" "./initramfs" "./iso/boot/."
+	grub-mkrescue -o "./barebones.iso" "./iso"
 
 # Utility targets
 runvm: vmlinuz initramfs
-	qemu-system-x86_64 -m 2048 -kernel vmlinuz -initrd initramfs
+	qemu-system-x86_64 -m "2048" -kernel "./vmlinuz" -initrd "./initramfs"
 
 runiso: barebones.iso
-	qemu-system-x86_64 -m 2048 -cdrom barebones.iso -boot d
+	qemu-system-x86_64 -m "2048" -cdrom "./barebones.iso" -boot d
 
 clean:
 	rm -rf vmlinuz initramfs $(KERNEL_DIRECTORY) $(KERNEL_ARCHIVE) \
-	iso/boot/vmlinuz \
-	iso/boot/initramfs barebones.iso
+	"./iso/boot/vmlinuz" \
+	"./iso/boot/initramfs" "./barebones.iso"

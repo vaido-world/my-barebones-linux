@@ -1,4 +1,5 @@
-KERNEL_VERSION=5.0.1
+# KERNEL_VERSION=5.0.1 # Compiles well on Ubuntu 19.04
+KERNEL_VERSION=5.11.1 # Compiles well on Ubuntu 21.04
 KERNEL_DIRECTORY=linux-$(KERNEL_VERSION)
 KERNEL_ARCHIVE=$(KERNEL_DIRECTORY).tar.xz
 KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KERNEL_ARCHIVE)

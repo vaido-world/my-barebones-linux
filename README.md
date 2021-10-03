@@ -31,7 +31,7 @@ sudo apt install libssl-dev --yes
 sudo apt install libelf-dev --yes
 
 # required by grub-mkrescue 
-sudo add-apt-repository universe
+echo | sudo add-apt-repository universe
 sudo apt-get update
 sudo apt install xorriso --yes
 sudo apt install mtools  --yes

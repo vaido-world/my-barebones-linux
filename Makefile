@@ -25,7 +25,7 @@ $(KERNEL_DIRECTORY):
 
 # ____________Initramfs_build_targets____________
 initramfs: initfs initfs/init
-	cd "./initfs/" && find "." | cpio --create --format="newc" > "../initramfs"
+	cd "./initfs/" && find "." | cpio --format="newc" --create  > "../initramfs"
 
 initfs/init: initfs init-source-code.c
 	gcc -static "./init-source-code.c" -o "./initfs/init"

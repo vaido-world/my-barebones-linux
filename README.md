@@ -23,21 +23,21 @@ Change the KERNEL_VERSION variable inside the `Makefile ` to `KERNEL_VERSION=5.1
 
 Then install these dependencies:
 ```
-sudo apt install make
-sudo apt install gcc
-sudo apt install flex
-sudo apt install bison
-sudo apt install libssl-dev 
-sudo apt install libelf-dev
+sudo apt install make       --yes
+sudo apt install gcc        --yes
+sudo apt install flex       --yes
+sudo apt install bison      --yes
+sudo apt install libssl-dev --yes
+sudo apt install libelf-dev --yes
 
 # required by grub-mkrescue 
 sudo add-apt-repository universe
 sudo apt-get update
-sudo apt install xorriso
-sudo apt install mtools
+sudo apt install xorriso --yes
+sudo apt install mtools  --yes
 
 
 # Optional dependency
-sudo apt install qemu-system-x86
+sudo apt install qemu-system-x86 --yes
 
 ```
